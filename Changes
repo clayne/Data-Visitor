@@ -1,6 +1,8 @@
 Revision history for Data-Visitor
 
 {{$NEXT}}
+    - updated distribution tooling (resolves RT#133059, a problem with the
+      compilation test when the installed perl has whitespace in its path)
 
 0.30  2013-06-24
     - doy/data-visitor should probably be the canonical repository at this
