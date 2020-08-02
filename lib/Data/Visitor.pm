@@ -7,7 +7,6 @@ use Scalar::Util qw/blessed refaddr reftype weaken isweak/;
 use overload ();
 use Symbol ();
 
-use Class::Load 'load_optional_class';
 use Tie::ToObject;
 
 no warnings 'recursion';
@@ -17,7 +16,7 @@ use namespace::clean -except => 'meta';
 # the double not makes this no longer undef, so exempt from useless constant warnings in older perls
 use constant DEBUG => not not our $DEBUG || $ENV{DATA_VISITOR_DEBUG};
 
-use constant HAS_DATA_ALIAS => load_optional_class('Data::Alias');
+use constant HAS_DATA_ALIAS => eval { +require Data::Alias; 1 };
 
 has tied_as_objects => (
 	isa => "Bool",
