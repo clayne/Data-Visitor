@@ -409,6 +409,10 @@ sub retain_magic {
 
 	my $seen_hash = $self->{_seen};
 	if ( $seen_hash->{weak} ) {
+		#if ("$]" >= '5.022') {
+		#  TODO: Data::Alias does not work on recent perls, but there is built-in aliasing support now.
+		#  e.g. see what Var::Pairs 0.003004 did.
+		#}
 		if (HAS_DATA_ALIAS) {
 			my @weak_refs;
 			foreach my $value ( Data::Alias::deref($proto) ) {
