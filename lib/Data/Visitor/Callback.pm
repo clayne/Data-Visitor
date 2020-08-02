@@ -2,7 +2,7 @@ package Data::Visitor::Callback;
 use Moose;
 # ABSTRACT: A Data::Visitor with callbacks.
 
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 use Data::Visitor ();
 
 use Carp qw(carp);

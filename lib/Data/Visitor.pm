@@ -2,7 +2,7 @@ package Data::Visitor;
 use Moose;
 # ABSTRACT: Visitor style traversal of Perl data structures
 
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 use Scalar::Util qw/blessed refaddr reftype weaken isweak/;
 use overload ();
 use Symbol ();
