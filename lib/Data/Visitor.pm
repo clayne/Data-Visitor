@@ -510,7 +510,7 @@ driven subclass, L<Data::Visitor::Callback>.
 
 =item visit $data
 
-This method takes any Perl value as it's only argument, and dispatches to the
+This method takes any Perl value as its only argument, and dispatches to the
 various other visiting methods using C<visit_no_rec_check>, based on the data's
 type.
 
@@ -519,7 +519,7 @@ called.
 
 =item visit_seen $data, $first_result
 
-When an already seen value is encountered again it's typically replaced with
+When an already seen value is encountered again, it is typically replaced with
 the result of the first visitation of that value. The value and the result of
 the first visitation are passed as arguments.
 
@@ -622,7 +622,7 @@ This object can be used as an C<fmap> of sorts - providing an ad-hoc functor
 interface for Perl data structures.
 
 In void context this functionality is ignored, but in any other context the
-default methods will all try to return a value of similar structure, with it's
+default methods will all try to return a value of similar structure, with its
 children also fmapped.
 
 =head1 SUBCLASSING
