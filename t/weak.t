@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More;
 
-use Test::Requires 'Data::Alias';
+use Test::Needs 'Data::Alias';
 
 use Scalar::Util qw(isweak weaken);
 
